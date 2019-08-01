@@ -31,9 +31,9 @@ public class EmployeeController extends HttpServlet {
         employee.setPosition(req.getParameter("position"));
         employee.setDepartment(req.getParameter("department"));
 
-        employee.setEmployeeRef(Ref.create(employee));
 
-        ofy().save().entity(employee).now();
+
+        ofy().defer().save().entity(employee);
         resp.sendRedirect("/employee/list");
     }
 }

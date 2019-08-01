@@ -21,13 +21,13 @@
         Birthday <input type="text" name="birthday">
     </div>
     <div>
-        Address <input type="text" name="birthday">
+        Address <input type="text" name="address">
     </div>
     <div>
-        Position <input type="text" name="birthday">
+        Position <input type="text" name="position">
     </div>
     <div>
-        Department <input type="text" name="birthday">
+        Department <input type="text" name="department">
     </div>
 
 

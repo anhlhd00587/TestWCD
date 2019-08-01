@@ -21,25 +21,11 @@
         for (int i = 0; i < list.size(); i++) {
     %>
     <li>
-        <div>
-            <%
-                if(list.get(i).getEmployeeRef()!=null)
-                {
-                    Employee employee = list.get(i).getEmployeeRef().get();
-            %>
-
-            <%
-                }
-            %>
-        </div>
-        <div>
-            <a href="/employee/detail?id=<%=list.get(i).getFullName%>"><%= list.get(i).getFullName()%></a>
-        </div>
+        <%=list.get(i).getFullName() + " | " + list.get(i).getAddress() + " | " + list.get(i).getBirthday() + " | " + list.get(i).getPosition() + " | " + list.get(i).getDepartment()%>
     </li>
     <%
         }
     %>
-
 </ul>
 </body>
 </html>

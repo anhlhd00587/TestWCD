@@ -5,6 +5,8 @@ import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 
+import java.util.Calendar;
+
 @Entity
 public class Employee {
     @Id
@@ -20,18 +22,12 @@ private long id;
     @Index
     private String department;
 
-    Ref<Employee> employeeRef;
+
+
+
 
     public Employee() {
-    }
-
-    public Employee(long id, String fullName, String birthday, String address, String position, String department) {
-        this.id = id;
-        this.fullName = fullName;
-        this.birthday = birthday;
-        this.address = address;
-        this.position = position;
-        this.department = department;
+        this.id = Calendar.getInstance().getTimeInMillis();
     }
 
     public long getId() {
@@ -81,11 +77,5 @@ private long id;
     public void setDepartment(String department) {
         this.department = department;
     }
-    public Ref<Employee> getEmployeeRef() {
-        return employeeRef;
-    }
 
-    public void setEmployeeRef(Ref<Employee> studentRef) {
-        this.employeeRef = studentRef;
-    }
 }
